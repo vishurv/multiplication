@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <title>PERSONAL DETAIL FORM</title>
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = document.getElementById("name").value;
+        document.getElementById('display1').innerHTML = document.getElementById("track").value;
+        document.getElementById('display2').innerHTML = document.getElementById("age").value;
+        document.getElementById('display3').innerHTML = document.getElementById("gender").value;
+    }
+  </script>
+
+  </head>
+  <body style="background-color:aquamarine">
+    <center>
+    <fieldset>
+<h1>Personal Details Form</h1>
+  <form>
+    <label><b>Name</b></label>
+    <input type="text" name="message" id="name"><br><br>
+    <label><b>Track</b></label>
+    <input type="text" id="track"><br><br>
+    <label>Age</label>
+    <select name="age" id="age">
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+    
+    </select><br><br>
+    <label id>Gender</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+</select><br><br>
+
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+</fieldset>
+  <br><br>
+  <fieldset>
+  <label>Your input: </label><br><br>
+  Name<p><span id='display'></span></p><br>
+  Track<p><span id='display1'></span></p><br>
+  Age<p><span id='display2'></span></p><br>
+  Gender<p><span id='display3'></span></p><br>
+</fieldset>
+</center>
+</body>
+</html>
