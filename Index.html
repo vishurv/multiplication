@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<style>
+h1{
+text-align: center;
+  color: yellow;
+  }
+  body {
+  background-color: lightblue;
+  border:crimson);
+}
+table{
+    margin-top:50px;
+    text-align: center;
+    background: chocolate;
+    color: cornflowerblue;
+}
+#show th,#show td{
+    padding: 13px;
+}
+#btna td input{
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h1>Personal Details Form</h1>
+<form>
+    <center>
+<table>
+<tr>
+<td>Name:</td><td><input type="text" id="fname"></td>
+</tr>
+<tbody>
+<tr>
+<td>Track:</td><td><input type="text" id="tname"></td>
+</tr>
+<tr>
+<td>Age:</td>
+<td><select id="age">
+<option value="ir">18</oprion>
+<option value="ir">19</oprion><option value="ir">20</oprion>
+<option value="ir">21</oprion><option value="ir">22</oprion>
+<option value="ir">23</oprion><option value="ir">24</oprion>
+<option value="ir">25</oprion><option value="ir">26</oprion>
+<option value="ir">27</oprion><option value="ir">28</oprion>
+<option value="ir">29</oprion><option value="ir">30</oprion>
+</select>
+</tr>
+<tr id="gen">
+<td>Gender</td>
+<td ><input type="radio" id="m" name="gender">male
+<input type="radio" id="f" name="gender">female
+<input type="radio" id="o" name="gender">others<br/>
+</td>
+</tr>
+<tr id="btna">
+<td colspan="2">
+<input type="submit" value="Submit" name="button" id="btn" onclick="AddRow()"></td>
+</tr>
+</table>
+<tbody>
+
+<table border="4" id="show">
+<thead>
+<tr>
+<th>First Name</th>
+<th>Track</th>
+<th>Age</th>
+<th>Gender</th>
+</thead>
+</table>
+</center>
+<script>
+var list1=[];
+var list2=[];
+var list3=[];
+var list4=[];
+
+var n=1;
+var x=0;
+function AddRow(){
+var AddRown = document.getElementById('show');
+var NewRow= AddRown.insertRow(n);
+
+list1[x]=document.getElementById("fname").value;
+list2[x]=document.getElementById("tname").value;
+list3[x]=document.getElementById("gen").value;
+list4[x]=document.getElementById("age").value;
+var cel1=NewRow.insertCell(0);
+var cel2=NewRow.insertCell(1);
+var cel3=NewRow.insertCell(2);
+var cel4=NewRow.insertCell(3);
+
+cel1.innerHTML=list1[x];
+cel2.innerHTML=list2[x];
+cel3.innerHTML=list3[x];
+cel4.innerHTML=list4[x];
+n++;
+x++;
+}
+</script>
+</body>
+</html>
